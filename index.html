@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Animation Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            background-color: #f5f6fa;
+            /* display: inline-block; */
+            /* width: 10rem; */
+            /* line-height: 10rem; */
+            /* text-align: center; */
+            margin: 1rem;
+            padding: 5rem;
+            border-radius: 50%;
+            box-shadow: 2px 2px 2px 2px #dcdde1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ------color to icons------ */
+        .fa-facebook {
+            color: #4c20fd;
+        }
+
+        .fa-twitter {
+            color: #0097e6;
+        }
+
+        .fa-instagram {
+            color: #e84393;
+        }
+
+        .fa-youtube {
+            color: #e84118;
+        }
+
+        .fa-linkedin {
+            color: #0097e6;
+        }
+
+
+        .fa-brands {
+            transition: all 0.3s linear;
+        }
+
+        a:hover .fa-brands {
+            transform: scale(1.5);
+            /* color: black; */
+            color: #f5f6fa;
+        }
+
+
+        /* ------blue mask layer-----  */
+        a::before {
+            background-color: #00a8ff;
+            content: "";
+            width: 120%;
+            height: 120%;
+            position: absolute;
+            top: 90%;
+            left: -50%;
+            transform: rotate(60deg);
+        }
+
+        /* ------blue mask animation effect-----  */
+        a:hover:before {
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: iconEffect 0.8s linear 0s 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes iconEffect {
+            0% {
+                top: 90%;
+                left: -50%;
+            }
+
+            50% {
+                top: -60%;
+                left: -10%;
+            }
+
+            100% {
+                top: -5%;
+                left: -5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href=""><i class="fa-brands fa-3x fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-3x fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-3x fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-3x fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-3x fa-linkedin"></i></a>
+    </div>
+</body>
+
+</html>
