@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icon Animation Effect</title>
+    <title>Footer Icon Hover Animation Effect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -118,7 +118,123 @@
 </head>
 
 <body>
+    <div class="container"><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons Hover Effects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background-color: silver;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul li {
+            /* background-color: #0984e3; */
+            color: #0984e3;
+            width: 15rem;
+            height: 15rem;
+            margin: 1rem;
+            border: 2px solid #0984e3;
+            border-radius: 50%;
+            list-style: none;
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s linear;
+        }
+
+        ul li:hover {
+            color: white;
+        }
+
+        ul li::before {
+            background-color: #0984e3;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            border-radius: 50%;
+            transform: scale(0.8);
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.3s linear;
+        }
+
+        ul li:hover::before {
+            opacity: 1;
+        }
+
+        ul li::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border: 2px dashed #0984e3;
+            border-radius: 50%;
+            z-index: -1;
+            transform: scale(0.9);
+            opacity: 0;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: rotate 10s linear 0s infinite normal none;
+        }
+
+        ul li:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg) scale(0.9);
+            }
+
+            to {
+                transform: rotate(360deg) scale(0.9);
+            }
+        }
+    </style>
+</head>
+
+<body>
     <div class="container">
+        <ul>
+            <li> <i class="fa-solid fa-heart"></i> </li>
+            <li> <i class="fa-solid fa-globe"></i> </li>
+            <li> <i class="fa-solid fa-gift"></i> </li>
+            <li> <i class="fa-solid fa-star"></i> </li>
+        </ul>
+    </div>
+</body>
+
+</html>
         <a href=""><i class="fa-brands fa-3x fa-facebook"></i></a>
         <a href=""><i class="fa-brands fa-3x fa-twitter"></i></a>
         <a href=""><i class="fa-brands fa-3x fa-instagram"></i></a>
